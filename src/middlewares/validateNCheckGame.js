@@ -8,7 +8,7 @@ export async function validateNCheckGame(req, res, next) {
 
   if (validation.error) {
     console.log(validation.error.details);
-    return res.sendStatus(422);
+    return res.sendStatus(400);
   }
 
   try {
