@@ -13,8 +13,6 @@ export async function validateNCheckCategory(req, res, next) {
       [name]
     );
 
-    console.log(query);
-
     if (query.rowCount !== 0) {
       return res.sendStatus(409);
     }
