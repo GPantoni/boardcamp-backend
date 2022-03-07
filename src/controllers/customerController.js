@@ -53,7 +53,7 @@ export async function getCustomerById(req, res) {
           birthday: dayjs(customer.birthday).format('YYYY-MM-DD'),
         });
       });
-      res.send(result);
+      res.send(result[0]);
     } else {
       res.sendStatus(404);
     }
